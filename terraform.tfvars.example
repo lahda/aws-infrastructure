@@ -1,0 +1,35 @@
+# Exemple de configuration - Copiez ce fichier vers terraform.tfvars et personnalisez
+
+# OBLIGATOIRE: Informations générales
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "aws-automation" 
+owner        = "cloud_user"
+
+# Configuration réseau
+vpc_cidr           = "10.0.0.0/16"
+availability_zones = ["us-east-1a", "us-east-1b"]
+
+# Configuration EC2 et Auto Scaling
+instance_type     = "t3.micro"
+min_size         = 1
+max_size         = 3
+desired_capacity = 2
+
+# Configuration Lambda
+lambda_timeout     = 300
+lambda_memory_size = 128
+
+# Configuration EventBridge
+eventbridge_schedule        = "rate(5 minutes)"
+use_custom_eventbridge_bus = false
+
+# Configuration Directory Service
+domain_name        = "corp.example.com"
+directory_edition  = "Standard"
+
+# SENSIBLE: À définir de manière sécurisée
+directory_password            = "VotreMotDePasseTresSecurise123!"
+database_connection_string    = "postgresql://localhost:5432/votre-db"
+primary_api_key              = "votre-cle-api-primaire-securisee"
+secondary_api_key            = "votre-cle-api-secondaire-securisee"
