@@ -105,7 +105,7 @@ terraform plan -var-file=terraform.tfvars
 terraform apply -var-file=terraform.tfvars
 ```
 
-## 🔧 Configuration Détaillée
+## Configuration Détaillée
 
 ### Configuration Lambda
 
@@ -145,7 +145,7 @@ Systems Manager fournit :
 
 ### Variables Sensibles
 
-⚠**Ne jamais** commiter de valeurs sensibles dans le code !
+**Ne jamais** commiter de valeurs sensibles dans le code !
 
 Utilisez une de ces méthodes en production :
 
