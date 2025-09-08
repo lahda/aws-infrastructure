@@ -79,7 +79,7 @@ Mettez à jour `environments/dev/backend.tf` avec vos informations.
 
 ```hcl
 # Informations obligatoires
-aws_region   = "us-west-2"
+aws_region   = "us-east-1"
 environment  = "dev" 
 project_name = "mon-projet"
 owner        = "MonEquipe"
